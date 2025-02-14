@@ -9,7 +9,7 @@ export default function DocumentUpload() {
   const [documentName, setDocumentName] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_URL = "http://localhost:5000/api/storage"; // Backend API URL
+  const API_URL = "https://click2care.onrender.com/api/storage"; // Backend API URL
 
   // Fetch prescriptions on component mount
   useEffect(() => {

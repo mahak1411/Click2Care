@@ -39,7 +39,7 @@ export default function SymptomTracker() {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/api/symptoms/patient/${patientId}`,
+        `https://click2care.onrender.com/api/symptoms/patient/${patientId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -71,7 +71,7 @@ export default function SymptomTracker() {
       }
 
       const response = await axios.post(
-        `http://localhost:5000/api/symptoms/add`,
+        `https://click2care.onrender.com/api/symptoms/add`,
         { ...formData, patient: patientId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

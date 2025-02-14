@@ -17,7 +17,7 @@ export default function AuthPage() {
     e.preventDefault();
     setError(""); // Clear previous errors
 
-    const url = isLogin ? "http://localhost:5000/api/auth/login" : "http://localhost:5000/api/auth/register";
+    const url = isLogin ? "https://click2care.onrender.com/api/auth/login" : "https://click2care.onrender.com/api/auth/register";
     const requestBody = isLogin
       ? { email: formData.email, password: formData.password }
       : formData;
