@@ -5,7 +5,7 @@ import connectDB from "./config/db.js";
 import symptomRoutes from "./routes/symptomRoutes.js";
 import PatientRoute from './routes/PatientRoute.js'
 import prescriptionRoutes from './routes/prescriptionRoutes.js'
-
+import path from 'path'
 // Load environment variables
 dotenv.config();
 
@@ -13,6 +13,8 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+const _dirname = path.resolve()
 
 // Middleware
 app.use(express.json());
@@ -23,10 +25,10 @@ app.use("/api/symptoms", symptomRoutes);
 app.use('/api/auth',PatientRoute)
 app.use('/api/storage',prescriptionRoutes)
 
-// Root Route
-app.get("/", (req, res) => {
-  res.send("TeleHealth API is running...");
-});
+app.use(express.static(path.join(_dirname , "/frontend/dist")))
+app.get('*',(_,res)=>{
+  res.sendFile(path.resolve(_dirname , "frontend" , "dist" , "index.html"))
+})
 
 // Server Port
 const PORT = process.env.PORT || 5000;
