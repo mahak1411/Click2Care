@@ -20,7 +20,8 @@ Click2Care is a **telehealth platform** designed to provide seamless healthcare 
 💾 **Database:** MongoDB / MySQL  
 🔐 **Authentication:** JWT  
 ☁️ **Cloud Storage:** Cloudinary  
-🚀 **Hosting & Deployment:** Vercel, Render, Netlify, Heroku  
+🚀 **Hosting & Deployment:** Render 
+🔗 **Live Project Link:** https://click2care.onrender.com/
 
 ---
 
