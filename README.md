@@ -21,6 +21,7 @@ Click2Care is a **telehealth platform** designed to provide seamless healthcare 
 🔐 **Authentication:** JWT  
 ☁️ **Cloud Storage:** Cloudinary  
 🚀 **Hosting & Deployment:** Render 
+
 🔗 **Live Project Link:** https://click2care.onrender.com/
 
 ---
